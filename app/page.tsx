@@ -118,7 +118,7 @@ const videoPapers = [
   },
   {
     venue: "NeurIPS 2026 [UR]",
-    title: "FlashFashion",
+    title: "FashionChameleon",
     subtitle: "流式交互生成",
     paperTitle: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization",
     paperUrl: "https://arxiv.org/abs/2605.15824",

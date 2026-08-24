@@ -176,7 +176,8 @@ test("ships the research figures and playable local videos", async () => {
   assert.match(page, /Tunnel Try-on/);
   assert.match(page, /iTryOn/);
   assert.match(page, /TryOnCrafter/);
-  assert.match(page, /FlashFashion/);
+  assert.match(page, /title: "FashionChameleon"/);
+  assert.doesNotMatch(page, /title: "FlashFashion"/);
   assert.match(page, /className="video-paper-media"/);
   assert.match(page, /Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos/);
   assert.match(page, /iTryOn: Mastering Interactive Video Virtual Try-On with Spatial-Semantic Guidance/);

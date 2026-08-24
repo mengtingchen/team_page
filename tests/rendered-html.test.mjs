@@ -199,6 +199,13 @@ test("ships the research figures and playable local videos", async () => {
   assert.match(page, /tryoncrafter-demo-poster\.jpg/);
   assert.match(page, /flashfashion-demo-poster\.jpg/);
   assert.match(css, /object-fit:\s*contain/);
+  assert.match(css, /body \{[^}]*font-size:\s*14px/s);
+  assert.match(css, /\.model-showcase \{[^}]*align-items:\s*stretch/s);
+  assert.match(css, /\.model-showcase figure \{[^}]*display:\s*flex/s);
+  assert.match(css, /\.model-showcase img \{[^}]*height:\s*clamp\(440px, 44vw, 660px\)/s);
+  assert.match(css, /@media \(max-width:\s*900px\)[\s\S]{0,500}\.business-grid \{\s*grid-template-columns:\s*1fr/);
+  assert.match(css, /\.business-highlights p \{[^}]*font-size:\s*12px/s);
+  assert.match(css, /\.video-paper-summary \{[^}]*font-size:\s*11\.5px/s);
   assert.equal((page.match(/<video/g) ?? []).length, 4);
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
 

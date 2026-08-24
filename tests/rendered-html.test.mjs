@@ -94,6 +94,14 @@ test("ships the research figures and playable local videos", async () => {
   assert.match(page, /\["01", "图像生成和编辑", "内容与意图"\]/);
   assert.match(page, /\["02", "实时交互视频", "统一能力"\]/);
   assert.doesNotMatch(page, /\["01", "多模态理解"/);
+  assert.ok(
+    page.indexOf("DENOISER: Rethinking the Robustness") > page.indexOf("ExpertVerse: A General-Purpose Benchmark"),
+    "ICIP 论文应在同年份列表中靠后展示",
+  );
+  assert.ok(
+    page.indexOf("Beyond Static Scenes: Camera-controllable Background Generation") > page.indexOf("ExpertVerse: A General-Purpose Benchmark"),
+    "ICME 论文应在同年份列表中靠后展示",
+  );
   assert.match(page, /swift-image-architecture\.png/);
   assert.match(page, /t2i-capability-showcase\.jpg/);
   assert.match(page, /edit-capability-showcase\.jpg/);

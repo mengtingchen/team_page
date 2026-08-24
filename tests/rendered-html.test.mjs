@@ -104,6 +104,10 @@ test("ships the research figures and playable local videos", async () => {
     page.indexOf("Beyond Static Scenes: Camera-controllable Background Generation") > page.indexOf("ExpertVerse: A General-Purpose Benchmark"),
     "ICME 论文应在同年份列表中靠后展示",
   );
+  assert.ok(
+    page.indexOf("Improving Human Image Animation via Semantic Representation Alignment") > page.indexOf("Beyond Static Scenes: Camera-controllable Background Generation"),
+    "Workshop 论文应在同年份列表末尾展示",
+  );
   assert.match(page, /swift-image-architecture\.png/);
   assert.match(page, /t2i-capability-showcase\.jpg/);
   assert.match(page, /edit-capability-showcase\.jpg/);

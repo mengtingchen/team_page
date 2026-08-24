@@ -263,7 +263,7 @@ export default function Home() {
             <div className="tryon-overview">
               <small>COMMERCIAL-SCALE VIRTUAL TRY-ON</small>
               <h3>面向真实消费场景的全栈商用试穿系统</h3>
-              <p>Tstars-Tryon 1.0 是淘宝 AI 试穿的算法内核。团队将虚拟试穿重构为统一的多图图像编辑任务，围绕数据治理、MMDiT 模型架构、渐进式训练与 RL 精调、Prompt 增强、CFG 与步数蒸馏完成全栈优化，在鲁棒性、真实感、组合灵活性和生成效率之间取得商用级平衡。</p>
+              <p>Tstars-Tryon 1.0 是淘宝 AI 试穿的算法内核。团队将虚拟试穿重构为统一的多图图像编辑任务，围绕数据治理、MMDiT 模型架构、渐进式训练与 RL 精调、Prompt 增强、CFG 与步数蒸馏完成全栈优化，在鲁棒性、真实感、组合灵活性和生成效率之间取得商用级突破。</p>
             </div>
             <article className="tryon-paper">
               <span>PAPER · 2026</span>

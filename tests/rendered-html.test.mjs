@@ -99,6 +99,8 @@ test("ships the research figures and playable local videos", async () => {
   assert.match(page, /\["05", "效率", "降低资源成本，支持大规模业务调用并支持实时生成"\]/);
   assert.match(page, /\["06", "可交互", "在实时的基础之上为更多交互形式创建基础"\]/);
   assert.match(css, /\.video-goals \{[^}]*grid-template-columns: repeat\(6, 1fr\)/);
+  assert.match(page, /在鲁棒性、真实感、组合灵活性和生成效率之间取得商用级突破/);
+  assert.doesNotMatch(page, /取得商用级平衡/);
   assert.ok(
     page.indexOf("DENOISER: Rethinking the Robustness") > page.indexOf("ExpertVerse: A General-Purpose Benchmark"),
     "ICIP 论文应在同年份列表中靠后展示",

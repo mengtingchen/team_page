@@ -96,6 +96,9 @@ test("ships the research figures and playable local videos", async () => {
   assert.doesNotMatch(page, /\["01", "多模态理解"/);
   assert.match(page, /<h3>T2I 图像生成<\/h3>/);
   assert.doesNotMatch(page, /T2I 文本生成图像/);
+  assert.match(page, /\["05", "效率", "降低资源成本，支持大规模业务调用并支持实时生成"\]/);
+  assert.match(page, /\["06", "可交互", "在实时的基础之上为更多交互形式创建基础"\]/);
+  assert.match(css, /\.video-goals \{[^}]*grid-template-columns: repeat\(6, 1fr\)/);
   assert.ok(
     page.indexOf("DENOISER: Rethinking the Robustness") > page.indexOf("ExpertVerse: A General-Purpose Benchmark"),
     "ICIP 论文应在同年份列表中靠后展示",

@@ -211,7 +211,7 @@ figure { margin: 0; }
 .paper-card footer { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
 .paper-card footer span { padding: 6px 8px; color: var(--orange); border: 1px solid #f0c7b4; background: #fffaf7; font-size: 8px; }
 
-.video-goals { display: grid; grid-template-columns: repeat(5, 1fr); margin-bottom: 14px; border: 1px solid var(--line); background: #fff; }
+.video-goals { display: grid; grid-template-columns: repeat(6, 1fr); margin-bottom: 14px; border: 1px solid var(--line); background: #fff; }
 .video-goals article { min-height: 112px; padding: 16px; border-right: 1px solid var(--line); }
 .video-goals article:last-child { border-right: 0; }
 .video-goals span { color: var(--orange); font: 750 10px/1 ui-monospace, monospace; }
@@ -293,8 +293,8 @@ figure { margin: 0; }
   .paper-card figure img { max-height: 360px; }
   .video-goals { grid-template-columns: repeat(3, 1fr); }
   .video-goals article { border-bottom: 1px solid var(--line); }
-  .video-goals article:nth-child(3) { border-right: 0; }
-  .video-goals article:nth-last-child(-n+2) { border-bottom: 0; }
+  .video-goals article:nth-child(3n) { border-right: 0; }
+  .video-goals article:nth-last-child(-n+3) { border-bottom: 0; }
   .section-lead { margin-left: 0; }
 }
 

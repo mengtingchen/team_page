@@ -401,7 +401,7 @@ export default function Home() {
         </section>
 
         <section className="recruitment" id="recruitment" aria-labelledby="recruitment-title">
-          <div className="recruitment-heading"><small>JOIN US · 加入我们</small><h2 id="recruitment-title">与我们一起，打造下一代电商 AI</h2></div>
+          <div className="recruitment-heading"><small>JOIN US · 加入我们</small><h2 id="recruitment-title">与我们一起，<br />打造下一代电商 AI</h2></div>
           <p>我们热忱欢迎对多模态生成技术充满热情、富有探索精神的同学加入我们，一起打造下一代电商 AI 创新业态！</p>
           <a href="mailto:cmt271286@taobao.com"><span>实习 · 校招 · 社招</span><strong>cmt271286@taobao.com</strong><b>投递简历 ↗</b></a>
         </section>

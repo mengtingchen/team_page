@@ -56,7 +56,7 @@ test("server-renders the Chinese technical homepage", async () => {
   assert.match(html, /NeurIPS 2026 \[UR\]/);
   assert.match(html, /AAAI 2027 \[UR\]/);
   assert.match(html, /REPORT/);
-  assert.match(html, /与我们一起，打造下一代电商 AI/);
+  assert.match(html, /与我们一起，<br\s*\/?>(?:<!-- -->)?打造下一代电商 AI/);
   assert.match(html, /我们热忱欢迎对多模态生成技术充满热情、富有探索精神的同学加入我们/);
   assert.match(html, /mailto:cmt271286@taobao\.com/);
   assert.match(html, /实习 · 校招 · 社招/);

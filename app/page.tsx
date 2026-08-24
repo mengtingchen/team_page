@@ -331,7 +331,7 @@ export default function Home() {
           <p className="section-lead">从高效的模型设计、训练范式、大规模数据链路到泛化评测方案，形成“数据—模型—训练—评测”为一体的迭代闭环。</p>
           <div className="model-showcase">
             <figure>
-              <header><span>01</span><div><small>TEXT TO IMAGE</small><h3>T2I 文本生成图像</h3></div></header>
+              <header><span>01</span><div><small>TEXT TO IMAGE</small><h3>T2I 图像生成</h3></div></header>
               <img src="/assets/t2i-capability-showcase.jpg" alt="T2I文本生成图像多场景效果展示" />
               <figcaption>覆盖中文排版、商业海报、产品视觉、人物与自然场景的高质量生成能力</figcaption>
             </figure>

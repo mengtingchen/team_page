@@ -20,7 +20,8 @@ test("server-renders the Chinese technical homepage", async () => {
   const html = await response.text();
 
   assert.match(html, /<html lang="zh-CN">/i);
-  assert.match(html, /<title>AI原生多模态生成团队｜技术与业务成果<\/title>/i);
+  assert.match(html, /<title>淘天集团AI原生多模态生成团队｜技术与业务成果<\/title>/i);
+  assert.match(html, /淘天集团 · AI原生/);
   assert.match(html, /直面消费者的/);
   assert.match(html, /图像生成和编辑/);
   assert.match(html, /实时交互视频/);

@@ -177,7 +177,7 @@ export default function Home() {
     <main className="report-shell" id="top">
       <aside className="report-rail" aria-label="报告目录">
         <a className="rail-brand" href="#top">
-          <strong>淘宝 · AI原生</strong>
+          <strong>淘天集团 · AI原生</strong>
           <span>多模态生成团队</span>
         </a>
         <nav>
@@ -192,7 +192,7 @@ export default function Home() {
 
       <div className="report-page">
         <header className="report-header">
-          <div className="header-brand"><strong>淘宝 · AI原生</strong><span>多模态生成团队</span></div>
+          <div className="header-brand"><strong>淘天集团 · AI原生</strong><span>多模态生成团队</span></div>
           <nav aria-label="页面导航">
             {sections.map(([number, title, , anchor]) => <a key={number} href={`#${anchor}`}>{number}　{title}</a>)}
           </nav>
@@ -203,7 +203,7 @@ export default function Home() {
             <p className="kicker">AI NATIVE MULTIMODAL GENERATION</p>
             <h1 id="hero-title">直面消费者的<br /><em>AIGC 图像与视频生成</em></h1>
             <i className="orange-rule" />
-            <p className="team-name">AI原生多模态生成团队</p>
+            <p className="team-name">淘天集团AI原生多模态生成团队</p>
             <p className="hero-intro">我们是淘天集团 AI 原生多模态生成团队，专注多模态内容理解与生成，以领先算法重塑用户体验、驱动产品创新，赋能 AI 试衣、时尚创意内容与商品智能素材等电商场景。持续攻坚生成算法基础问题，打造高效稳定的 C 端商用级生成模型。</p>
             <div className="hero-expertise">
               {heroExpertise.map(([number, title, note]) => (
@@ -407,7 +407,7 @@ export default function Home() {
         </section>
 
         <footer className="report-footer">
-          <strong>淘</strong><span>AI原生多模态生成团队 · 淘天集团</span><small>直面消费者的 AIGC 图像与视频生成</small>
+          <strong>淘</strong><span>淘天集团AI原生多模态生成团队</span><small>直面消费者的 AIGC 图像与视频生成</small>
         </footer>
       </div>
     </main>

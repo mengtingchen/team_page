@@ -28,6 +28,7 @@ test("server-renders the Chinese technical homepage", async () => {
   assert.match(html, /图像生成和编辑/);
   assert.match(html, /实时交互视频/);
   assert.match(html, /从生成基础问题，走向真实消费体验/);
+  assert.doesNotMatch(html, /图 0\.1　八位真实用户、多体型与多样穿搭生成结果/);
   assert.match(html, /淘宝业务场景/);
   assert.match(html, /规模化全量上线/);
   assert.match(html, /淘宝 App、千问购物助手、千问 App 多场景全量上线/);

@@ -253,7 +253,6 @@ export default function Home() {
           </div>
           <figure className="hero-figure">
             <img src="/assets/tryon-grid-2x4.png" alt="AI试衣八位真实用户的两行四列效果展示" />
-            <figcaption>图 0.1　八位真实用户、多体型与多样穿搭生成结果</figcaption>
           </figure>
         </section>
 

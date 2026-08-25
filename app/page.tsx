@@ -324,7 +324,7 @@ export default function Home() {
             </article>
             <article className="tryon-feature-card">
               <header><span>02</span><h3>Supports Multiple Challenging, Extreme and Complex Scenarios Virtual Try-on</h3></header>
-              <figure><img src="/assets/tryon-challenging-showcase.jpg" alt="复杂与极端场景下的虚拟试穿效果" /></figure>
+              <figure><img src="/assets/tryon-challenging-showcase-optimized.jpg" alt="复杂与极端场景下的虚拟试穿效果" /></figure>
               <p>覆盖复杂光照、极端姿态、多人、宠物、特殊场景与非典型主体等长尾试穿需求。</p>
             </article>
             <article className="tryon-feature-card">

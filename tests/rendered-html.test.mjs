@@ -152,7 +152,7 @@ test("ships the research figures and playable local videos", async () => {
   assert.match(page, /taobao-ai-tryon-full\.mp4/);
   assert.match(page, /taobao-ai-tryon-full-poster\.jpg/);
   assert.match(page, /tryon-wild-showcase\.jpg/);
-  assert.match(page, /tryon-challenging-showcase\.jpg/);
+  assert.match(page, /tryon-challenging-showcase-optimized\.jpg/);
   assert.match(page, /tryon-gsb-sota\.jpg/);
   assert.match(page, /Robust and Realistic Virtual Try-on in the Wild/);
   assert.match(page, /Supports Multiple Challenging, Extreme and Complex Scenarios Virtual Try-on/);
@@ -232,7 +232,7 @@ test("ships the research figures and playable local videos", async () => {
     access(new URL("../public/assets/taobao-ai-tryon-full.mp4", import.meta.url)),
     access(new URL("../public/assets/taobao-ai-tryon-full-poster.jpg", import.meta.url)),
     access(new URL("../public/assets/tryon-wild-showcase.jpg", import.meta.url)),
-    access(new URL("../public/assets/tryon-challenging-showcase.jpg", import.meta.url)),
+    access(new URL("../public/assets/tryon-challenging-showcase-optimized.jpg", import.meta.url)),
     access(new URL("../public/assets/tryon-gsb-sota.jpg", import.meta.url)),
     access(new URL("../public/assets/tryon-benchmark-distribution.jpg", import.meta.url)),
     access(new URL("../public/assets/tunnel-tryon-architecture.jpg", import.meta.url)),

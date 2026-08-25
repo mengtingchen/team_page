@@ -27,10 +27,20 @@ if (!stylesheetMatch) throw new Error("Could not find the compiled stylesheet in
 const stylesheetPath = path.join(root, "dist/client", stylesheetMatch[1].replace(/^\//, ""));
 const stylesheet = await readFile(stylesheetPath, "utf8");
 html = html.replace(stylesheetMatch[0], `<style>${stylesheet}</style>`);
+
+const preservedScripts = [];
+html = html.replace(/<script\b[^>]*data-scrollspy[^>]*>[\s\S]*?<\/script>/gi, (script) => {
+  const marker = `<!-- preserved-scrollspy-${preservedScripts.length} -->`;
+  preservedScripts.push(script);
+  return marker;
+});
 html = html
   .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "")
   .replace(/<link\b(?![^>]*rel=["']icon["'])[^>]*>/gi, "")
   .replace(/<meta\b[^>]*(?:og:image|twitter:image|localhost)[^>]*>/gi, "");
+preservedScripts.forEach((script, index) => {
+  html = html.replace(`<!-- preserved-scrollspy-${index} -->`, script);
+});
 
 const staticMetadata = [
   "<title>淘天集团AI原生多模态生成团队｜技术与业务成果</title>",

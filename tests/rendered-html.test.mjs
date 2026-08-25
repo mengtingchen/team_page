@@ -20,6 +20,8 @@ test("server-renders the Chinese technical homepage", async () => {
   const html = await response.text();
 
   assert.match(html, /<html lang="zh-CN">/i);
+  assert.doesNotMatch(html, /class="rail-brand"/);
+  assert.match(html, /data-scrollspy="true"/);
   assert.match(html, /<title>淘天集团AI原生多模态生成团队｜技术与业务成果<\/title>/i);
   assert.match(html, /淘天集团 · AI原生/);
   assert.match(html, /直面消费者的/);
@@ -93,6 +95,10 @@ test("ships the research figures and playable local videos", async () => {
   ]);
 
   assert.match(page, /\["01", "图像生成和编辑", "内容与意图"\]/);
+  assert.doesNotMatch(page, /className="rail-brand"/);
+  assert.match(page, /className=\{index === 0 \? "is-active"/);
+  assert.match(page, /data-scrollspy="true"/);
+  assert.match(css, /\.report-rail nav a\.is-active/);
   assert.match(page, /\["02", "实时交互视频", "统一能力"\]/);
   assert.doesNotMatch(page, /\["01", "多模态理解"/);
   assert.match(page, /<h3>T2I 图像生成<\/h3>/);

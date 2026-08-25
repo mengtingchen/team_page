@@ -6,6 +6,46 @@ const sections = [
   ["05", "团队学术论文", "Publications", "publications"],
 ];
 
+const scrollSpyScript = `(() => {
+  const links = Array.from(document.querySelectorAll('.report-rail nav a[href^="#"]'));
+  const entries = links.map((link) => {
+    const id = decodeURIComponent(link.hash.slice(1));
+    return { link, section: document.getElementById(id) };
+  }).filter((entry) => entry.section);
+  if (!entries.length) return;
+
+  const activate = (activeLink) => {
+    links.forEach((link) => {
+      const active = link === activeLink;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  let framePending = false;
+  const update = () => {
+    framePending = false;
+    const activationLine = Math.min(260, window.innerHeight * 0.32);
+    let current = entries[0];
+    for (const entry of entries) {
+      if (entry.section.getBoundingClientRect().top <= activationLine) current = entry;
+      else break;
+    }
+    activate(current.link);
+  };
+  const requestUpdate = () => {
+    if (framePending) return;
+    framePending = true;
+    window.requestAnimationFrame(update);
+  };
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
+  window.addEventListener('resize', requestUpdate);
+  window.addEventListener('hashchange', requestUpdate);
+  update();
+})();`;
+
 const businessHighlights = [
   {
     number: "01",
@@ -176,13 +216,9 @@ export default function Home() {
   return (
     <main className="report-shell" id="top">
       <aside className="report-rail" aria-label="报告目录">
-        <a className="rail-brand" href="#top">
-          <strong>淘天集团 · AI原生</strong>
-          <span>多模态生成团队</span>
-        </a>
         <nav>
-          {sections.map(([number, title, , anchor]) => (
-            <a href={`#${anchor}`} key={number}>
+          {sections.map(([number, title, , anchor], index) => (
+            <a className={index === 0 ? "is-active" : undefined} aria-current={index === 0 ? "location" : undefined} href={`#${anchor}`} key={number}>
               <b>{number}</b><span>{title}</span>
             </a>
           ))}
@@ -410,6 +446,7 @@ export default function Home() {
           <strong>淘</strong><span>淘天集团AI原生多模态生成团队</span><small>直面消费者的 AIGC 图像与视频生成</small>
         </footer>
       </div>
+      <script data-scrollspy="true" dangerouslySetInnerHTML={{ __html: scrollSpyScript }} />
     </main>
   );
 }

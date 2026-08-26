@@ -157,7 +157,7 @@ const videoPapers = [
     text: "引入可渲染的 4D 试衣代理，增强跨视角稳定性并支持镜头轨迹控制。",
   },
   {
-    venue: "NeurIPS 2026 [UR]",
+    venue: "Under Review",
     title: "FashionChameleon",
     subtitle: "流式交互生成",
     paperTitle: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization",
@@ -179,17 +179,17 @@ const videoGoals = [
 ];
 
 const academicPublications = [
-  { year: "2026", venue: "NeurIPS 2026 [UR]", title: "What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:Se3iqnhoufwC" },
-  { year: "2026", venue: "NeurIPS 2026 [UR]", title: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:0EnyYjriUFMC" },
+  { year: "2026", venue: "Under Review", title: "What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:Se3iqnhoufwC" },
+  { year: "2026", venue: "Under Review", title: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:0EnyYjriUFMC" },
   { year: "2026", venue: "ECCV 2026", title: "TryOnCrafter: Unleashing Camera Trajectories for Realistic Video Virtual Try-on via a Renderable 4D Try-on Proxy", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:5nxA0vEk-isC" },
-  { year: "2026", venue: "NeurIPS 2026 [UR]", title: "Continuous-Time Distribution Matching for Few-Step Diffusion Distillation", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:roLk4NBRz8UC" },
+  { year: "2026", venue: "Under Review", title: "Continuous-Time Distribution Matching for Few-Step Diffusion Distillation", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:roLk4NBRz8UC" },
   { year: "2026", venue: "REPORT", title: "Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:ufrVoPGSRksC" },
   { year: "2026", venue: "ICML 2026", title: "iTryOn: Mastering Interactive Video Virtual Try-On with Spatial-Semantic Guidance", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:UebtZRa9Y70C" },
   { year: "2026", venue: "ICLR 2026", title: "ORION: Decoupling and Alignment for Unified Autoregressive Understanding and Generation", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:_FxGoFyzp5QC" },
   { year: "2026", venue: "REPORT", title: "Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models", url: "https://arxiv.org/abs/2608.20334v1" },
   { year: "2026", venue: "REPORT", title: "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation", url: "https://arxiv.org/abs/2608.18076v1" },
   { year: "2026", venue: "REPORT", title: "CPI-Bench: A Comprehensive, Practical and Intelligent Benchmark for Real-World Image Editing", url: "https://arxiv.org/abs/2608.14546v1" },
-  { year: "2026", venue: "AAAI 2027 [UR]", title: "ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&cstart=20&pagesize=80&citation_for_view=LcoK9ZEAAAAJ:8k81kl-MbHgC" },
+  { year: "2026", venue: "Under Review", title: "ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&cstart=20&pagesize=80&citation_for_view=LcoK9ZEAAAAJ:8k81kl-MbHgC" },
   { year: "2026", venue: "ICIP 2026", title: "DENOISER: Rethinking the Robustness for Open-Vocabulary Action Recognition", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:zYLM7Y9cAGgC" },
   { year: "2026", venue: "ICIP 2026", title: "Squeeze Out Tokens from Sample for Finer-Grained Data Governance", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:eQOLeE2rZwMC" },
   { year: "2026", venue: "ICME 2026", title: "Beyond Static Scenes: Camera-controllable Background Generation for Human Motion", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:YsMSGLbcyi4C" },

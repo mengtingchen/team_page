@@ -57,8 +57,8 @@ test("server-renders the Chinese technical homepage", async () => {
   assert.match(html, /FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization/);
   assert.match(html, /ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis/);
   assert.match(html, /ICML 2026/);
-  assert.match(html, /NeurIPS 2026 \[UR\]/);
-  assert.match(html, /AAAI 2027 \[UR\]/);
+  assert.ok((html.match(/Under Review/g) ?? []).length >= 5);
+  assert.doesNotMatch(html, /\[UR\]/);
   assert.match(html, /REPORT/);
   assert.match(html, /与我们一起，<br\s*\/?>(?:<!-- -->)?打造下一代电商 AI/);
   assert.match(html, /我们热忱欢迎对多模态生成技术充满热情、富有探索精神的同学加入我们/);

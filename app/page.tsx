@@ -451,25 +451,15 @@ export default function Home() {
               <span>阅读论文 ↗</span>
             </a>
           </div>
-          <div className="commerce-metrics" aria-label="论文报告的模型与生产指标">
-            <div><b>6B</b><span>Swift-Image 生成骨干</span></div>
-            <div><b>5 秒级</b><span>单张主图生成延迟</span></div>
-            <div><b>百万张 / 日</b><span>线上主图生产规模</span></div>
-          </div>
-          <figure className="commerce-figure">
-            <a href="/assets/commercegen-pipeline.png" target="_blank" rel="noreferrer" aria-label="查看 CommerceGen-Studio 完整框架图">
-              <img src="/assets/commercegen-pipeline.png" width="2014" height="1093" loading="lazy" decoding="async" alt="CommerceGen-Studio训练与推理框架：PERL-Agent卖点提炼、Layout Thinker版式规划与SKU-DiT多条件生成" />
-            </a>
-            <figcaption>端到端框架 · 从多源商品信息到主图生成，结合强化学习、蒸馏与版式优化。点击图片查看原图。</figcaption>
-          </figure>
           <div className="commerce-methods">
             <article><small>01 · PERL-AGENT</small><h3>提炼可信卖点</h3><p>融合标题、OCR 与商品属性，通过生成、评判、分析和优化的闭环提炼卖点，减少信息冲突。</p></article>
             <article><small>02 · LAYOUT THINKER</small><h3>规划图文版式</h3><p>将卖点转为可执行布局，以文本与成图两类奖励优化商品、商标和文案的编排。</p></article>
             <article><small>03 · SKU-DIT</small><h3>兼顾保真与效率</h3><p>采用“强化—蒸馏—再强化”训练，在少步生成下保持商品细节、商标与文字质量。</p></article>
           </div>
           <figure className="commerce-figure commerce-showcase">
-            <a href="/assets/commercegen-showcase.png" target="_blank" rel="noreferrer" aria-label="查看 CommerceGen-Studio 完整生成效果图">
-              <img src="/assets/commercegen-showcase.png" width="1354" height="2038" loading="lazy" decoding="async" alt="CommerceGen-Studio跨品类主图生成效果，涵盖鞋服、家居、美妆、家电与食品等商品" />
+            <a className="commerce-showcase-pair" href="/assets/commercegen-showcase.png" target="_blank" rel="noreferrer" aria-label="查看 CommerceGen-Studio 完整生成效果图">
+              <span className="commerce-showcase-half commerce-showcase-top"><img src="/assets/commercegen-showcase.png" width="1354" height="2038" loading="lazy" decoding="async" alt="CommerceGen-Studio跨品类生成效果，上半图" /></span>
+              <span className="commerce-showcase-half commerce-showcase-bottom"><img src="/assets/commercegen-showcase.png" width="1354" height="2038" loading="lazy" decoding="async" alt="CommerceGen-Studio跨品类生成效果，下半图" /></span>
             </a>
             <figcaption>跨品类生成效果 · 商品主体、品牌标识与卖点文案协同呈现。图片来自论文 Figure 1，点击查看原图。</figcaption>
           </figure>

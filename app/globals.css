@@ -373,11 +373,6 @@ figure { margin: 0; }
 .commerce-report small, .commerce-methods small, .commerce-benchmark small { color: var(--orange); font: 11px/1.5 ui-monospace, monospace; }
 .commerce-report strong { font: 600 17px/1.5 Georgia, serif; }
 .commerce-report span { margin-top: auto; color: var(--orange); font-size: 12px; }
-.commerce-metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin: 24px 0; border: 1px solid var(--line); }
-.commerce-metrics > div { display: grid; gap: 8px; padding: 20px; border-right: 1px solid var(--line); }
-.commerce-metrics > div:last-child { border-right: 0; }
-.commerce-metrics b { color: var(--orange); font: 650 clamp(23px, 2.3vw, 34px)/1.2 Arial, "PingFang SC", sans-serif; }
-.commerce-metrics span { color: var(--muted); font-size: 12px; }
 .commerce-figure { margin: 24px 0 0; }
 .commerce-figure img { width: 100%; height: auto; border: 1px solid var(--line); background: #fff; }
 .commerce-figure figcaption { margin-top: 10px; color: var(--muted); font: 11px/1.7 ui-monospace, monospace; }
@@ -385,7 +380,11 @@ figure { margin: 0; }
 .commerce-methods article { padding: 22px; border-right: 1px solid var(--line); }
 .commerce-methods article:last-child { border-right: 0; }
 .commerce-methods h3 { margin: 12px 0 10px; font-size: 19px; }
-.commerce-showcase img { max-height: 1000px; object-fit: contain; }
+.commerce-showcase-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.commerce-showcase-half { position: relative; display: block; overflow: hidden; aspect-ratio: 1354 / 1019; }
+.commerce-showcase-half img { position: absolute; left: 0; width: 100%; height: 200%; max-height: none; border: 0; }
+.commerce-showcase-top img { top: 0; }
+.commerce-showcase-bottom img { bottom: 0; }
 .commerce-benchmark { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 24px; padding: 24px; border: 1px solid var(--line); background: var(--panel); }
 .commerce-benchmark h3 { margin: 8px 0; font: 600 23px/1.2 Georgia, serif; }
 .commerce-benchmark nav { display: flex; flex-wrap: wrap; flex-shrink: 0; gap: 12px 20px; color: var(--orange); font-size: 12px; }
@@ -401,9 +400,4 @@ figure { margin: 0; }
   .commerce-methods article { border-right: 0; border-bottom: 1px solid var(--line); }
   .commerce-methods article:last-child { border-bottom: 0; }
   .commerce-benchmark { flex-direction: column; align-items: flex-start; }
-}
-@media (max-width: 620px) {
-  .commerce-metrics > div { padding: 14px 9px; }
-  .commerce-metrics b { font-size: 20px; }
-  .commerce-metrics span { font-size: 11px; }
 }

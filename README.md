@@ -108,4 +108,4 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 - Push the same verified source commit to a new `codex/` branch on both GitHub (`mengtingchen/team_page`) and Alibaba (`cmt271286/team_page`). Do not overwrite Alibaba `main`.
 - Copy the generated `index.html` and referenced non-video assets into the GitHub static checkout for publication. Its existing videos remain available.
 
-The 2026-10-22 update adds CommerceGen-Studio and Representation Guidance as arXiv preprints, and records PAE, FashionChameleon and CDM as NeurIPS 2026 papers.
+The 2026-10-22 update adds CommerceGen-Studio (REPORT) and Representation Guidance (Under Review), and records PAE, FashionChameleon and CDM as NeurIPS 2026 papers.

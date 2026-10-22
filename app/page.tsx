@@ -179,10 +179,10 @@ const videoGoals = [
 ];
 
 // Status reference: https://mengtingchen.github.io/ (checked 2026-10-22).
-// New arXiv releases have no publicly stated conference or review outcome.
+// CommerceGen-Studio and Representation Guidance statuses confirmed by the owner.
 const recentPreprints = [
-  { year: "2026", venue: "arXiv", date: "2026-10", name: "CommerceGen-Studio", title: "CommerceGen-Studio: An End-to-End Framework for Commercial-Grade Main-Image Generation", url: "https://arxiv.org/abs/2610.20603", summary: "面向商业级电商主图生成的端到端框架。" },
-  { year: "2026", venue: "arXiv", date: "2026-10", name: "Representation Guidance", title: "Learning Representations to Guide Pixel Diffusion Transformers", url: "https://arxiv.org/abs/2610.12978", summary: "通过学习表征引导像素空间 Diffusion Transformer。" },
+  { year: "2026", venue: "REPORT", date: "2026-10", name: "CommerceGen-Studio", title: "CommerceGen-Studio: An End-to-End Framework for Commercial-Grade Main-Image Generation", url: "https://arxiv.org/abs/2610.20603", summary: "面向商业级电商主图生成的端到端框架。" },
+  { year: "2026", venue: "Under Review", date: "2026-10", name: "Representation Guidance", title: "Learning Representations to Guide Pixel Diffusion Transformers", url: "https://arxiv.org/abs/2610.12978", summary: "通过学习表征引导像素空间 Diffusion Transformer。" },
 ];
 
 const academicPublications = [
@@ -440,7 +440,7 @@ export default function Home() {
           <SectionTitle number="05" title="团队学术论文" subtitle="Publications" />
           <ol className="publication-list">
             {academicPublications.map((paper) => (
-              <li key={paper.title} className={paper.venue === "NeurIPS 2026" ? "publication-accepted" : undefined}>
+              <li key={paper.title}>
                 <time>{paper.year}</time>
                 <a href={paper.url} target="_blank" rel="noreferrer">{paper.title}</a>
                 {paper.venue && <span>{paper.venue}</span>}

@@ -357,7 +357,6 @@ figure { margin: 0; }
 .research-announcement > span { color: var(--orange); font: 11px/1.5 ui-monospace, monospace; }
 .research-announcement strong { font-size: 14px; }
 .research-announcement > b { margin-left: auto; color: var(--orange); font-size: 12px; }
-.publication-list .publication-accepted > span { color: #fff; background: #b9380c; border-color: #b9380c; }
 .research-announcement:hover strong { color: var(--orange); }
 .research-announcement:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
 @media (max-width: 900px) {

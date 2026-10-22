@@ -68,16 +68,16 @@ test("server-renders the Chinese technical homepage", async () => {
   assert.match(html, /ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis/);
   assert.match(html, /ICML 2026/);
   const publications = html.match(/<ol class="publication-list">([\s\S]*?)<\/ol>/)?.[1] ?? "";
-  assert.equal((publications.match(/Under Review/g) ?? []).length, 2, "Representation Guidance and ExpertVerse are under review");
+  assert.equal((publications.match(/Under Review/g) ?? []).length, 3, "CheckDistill, Representation Guidance and ExpertVerse are under review");
   assert.equal((publications.match(/NeurIPS 2026/g) ?? []).length, 3);
-  assert.equal((publications.match(/<li\b/g) ?? []).length, 23);
+  assert.equal((publications.match(/<li\b/g) ?? []).length, 24);
   const rows = publications.match(/<li\b[^>]*>[\s\S]*?<\/li>/g) ?? [];
   for (const arxiv of ["2605.07915", "2605.15824", "2605.06376"]) {
     const row = rows.find((entry) => entry.includes(`https://arxiv.org/abs/${arxiv}`)) ?? "";
     assert.doesNotMatch(row, /class="publication-accepted"/);
     assert.match(row, /<span>NeurIPS 2026<\/span>/);
   }
-  for (const [arxiv, venue] of [["2610.20603", "REPORT"], ["2610.12978", "Under Review"]]) {
+  for (const [arxiv, venue] of [["2610.26740", "Under Review"], ["2610.20603", "REPORT"], ["2610.12978", "Under Review"]]) {
     const row = rows.find((entry) => entry.includes(`https://arxiv.org/abs/${arxiv}`)) ?? "";
     assert.ok(row.includes(`<span>${venue}</span>`));
   }

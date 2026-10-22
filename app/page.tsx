@@ -187,6 +187,7 @@ const recentPreprints = [
 ];
 
 const academicPublications = [
+  { year: "2026", venue: "Under Review", title: "CheckDistill: Adaptive Checklist Distillation for Efficient Distributional Reward Modeling in Image Editing", url: "https://arxiv.org/abs/2610.26740" },
   ...recentPreprints,
   { year: "2026", venue: "NeurIPS 2026", title: "What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion", url: "https://arxiv.org/abs/2605.07915" },
   { year: "2026", venue: "NeurIPS 2026", title: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization", url: "https://arxiv.org/abs/2605.15824" },

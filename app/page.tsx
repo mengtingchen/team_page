@@ -210,8 +210,6 @@ const academicPublications = [
   { year: "2024", venue: "ACM MM 2024", title: "Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:Tyk-4Ss8FVUC" },
 ];
 
-const neurips2026Papers = academicPublications.filter((paper) => paper.venue === "NeurIPS 2026");
-
 function SectionTitle({ number, title, subtitle }: { number: string; title: string; subtitle: string }) {
   return (
     <div className="section-title">
@@ -440,27 +438,6 @@ export default function Home() {
 
         <section className="report-section publications" id="publications">
           <SectionTitle number="05" title="团队学术论文" subtitle="Publications" />
-          <div className="research-updates">
-            <article className="research-acceptance">
-              <small>2026.09 · ACCEPTED</small>
-              <h3><b>{neurips2026Papers.length}</b> 篇论文录用 NeurIPS 2026</h3>
-              <p>从潜空间表征、实时交互视频到少步扩散蒸馏。</p>
-              <ul>
-                {neurips2026Papers.map((paper, index) => (
-                  <li key={paper.title}><a href={paper.url} target="_blank" rel="noreferrer">{["PAE", "FashionChameleon", "CDM"][index]} ↗</a></li>
-                ))}
-              </ul>
-            </article>
-            {recentPreprints.map((paper) => (
-              <article key={paper.url}>
-                <small><time dateTime={paper.date}>2026.10</time> · PREPRINT</small>
-                <h3><a href={paper.url} target="_blank" rel="noreferrer">{paper.name} ↗</a></h3>
-                <p>{paper.summary}</p>
-                <a className="research-paper-link" href={paper.url} target="_blank" rel="noreferrer">阅读论文 ↗</a>
-              </article>
-            ))}
-          </div>
-          <p className="publication-note">更新于 <time dateTime="2026-10-22">2026.10.22</time> · 论文信息参考 <a href="https://mengtingchen.github.io/" target="_blank" rel="noreferrer">Mengting Chen 个人主页 ↗</a>。新论文按公开信息标注为预印本。</p>
           <ol className="publication-list">
             {academicPublications.map((paper) => (
               <li key={paper.title} className={paper.venue === "NeurIPS 2026" ? "publication-accepted" : undefined}>

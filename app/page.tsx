@@ -157,7 +157,7 @@ const videoPapers = [
     text: "引入可渲染的 4D 试衣代理，增强跨视角稳定性并支持镜头轨迹控制。",
   },
   {
-    venue: "Under Review",
+    venue: "NeurIPS 2026",
     title: "FashionChameleon",
     subtitle: "流式交互生成",
     paperTitle: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization",
@@ -178,18 +178,26 @@ const videoGoals = [
   ["06", "可交互", "在实时的基础之上为更多交互形式创建基础"],
 ];
 
+// Status reference: https://mengtingchen.github.io/ (checked 2026-10-22).
+// New arXiv releases have no publicly stated conference or review outcome.
+const recentPreprints = [
+  { year: "2026", venue: "arXiv", date: "2026-10", name: "CommerceGen-Studio", title: "CommerceGen-Studio: An End-to-End Framework for Commercial-Grade Main-Image Generation", url: "https://arxiv.org/abs/2610.20603", summary: "面向商业级电商主图生成的端到端框架。" },
+  { year: "2026", venue: "arXiv", date: "2026-10", name: "Representation Guidance", title: "Learning Representations to Guide Pixel Diffusion Transformers", url: "https://arxiv.org/abs/2610.12978", summary: "通过学习表征引导像素空间 Diffusion Transformer。" },
+];
+
 const academicPublications = [
-  { year: "2026", venue: "Under Review", title: "What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:Se3iqnhoufwC" },
-  { year: "2026", venue: "Under Review", title: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:0EnyYjriUFMC" },
+  ...recentPreprints,
+  { year: "2026", venue: "NeurIPS 2026", title: "What Matters for Diffusion-Friendly Latent Manifold? Prior-Aligned Autoencoders for Latent Diffusion", url: "https://arxiv.org/abs/2605.07915" },
+  { year: "2026", venue: "NeurIPS 2026", title: "FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization", url: "https://arxiv.org/abs/2605.15824" },
   { year: "2026", venue: "ECCV 2026", title: "TryOnCrafter: Unleashing Camera Trajectories for Realistic Video Virtual Try-on via a Renderable 4D Try-on Proxy", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:5nxA0vEk-isC" },
-  { year: "2026", venue: "Under Review", title: "Continuous-Time Distribution Matching for Few-Step Diffusion Distillation", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:roLk4NBRz8UC" },
+  { year: "2026", venue: "NeurIPS 2026", title: "Continuous-Time Distribution Matching for Few-Step Diffusion Distillation", url: "https://arxiv.org/abs/2605.06376" },
   { year: "2026", venue: "REPORT", title: "Tstars-Tryon 1.0: Robust and Realistic Virtual Try-On for Diverse Fashion Items", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:ufrVoPGSRksC" },
   { year: "2026", venue: "ICML 2026", title: "iTryOn: Mastering Interactive Video Virtual Try-On with Spatial-Semantic Guidance", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:UebtZRa9Y70C" },
   { year: "2026", venue: "ICLR 2026", title: "ORION: Decoupling and Alignment for Unified Autoregressive Understanding and Generation", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:_FxGoFyzp5QC" },
   { year: "2026", venue: "REPORT", title: "Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models", url: "https://arxiv.org/abs/2608.20334v1" },
   { year: "2026", venue: "REPORT", title: "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation", url: "https://arxiv.org/abs/2608.18076v1" },
   { year: "2026", venue: "REPORT", title: "CPI-Bench: A Comprehensive, Practical and Intelligent Benchmark for Real-World Image Editing", url: "https://arxiv.org/abs/2608.14546v1" },
-  { year: "2026", venue: "Under Review", title: "ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&cstart=20&pagesize=80&citation_for_view=LcoK9ZEAAAAJ:8k81kl-MbHgC" },
+  { year: "2026", venue: "Under Review", title: "ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis", url: "https://arxiv.org/abs/2607.19341" },
   { year: "2026", venue: "ICIP 2026", title: "DENOISER: Rethinking the Robustness for Open-Vocabulary Action Recognition", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:zYLM7Y9cAGgC" },
   { year: "2026", venue: "ICIP 2026", title: "Squeeze Out Tokens from Sample for Finer-Grained Data Governance", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:eQOLeE2rZwMC" },
   { year: "2026", venue: "ICME 2026", title: "Beyond Static Scenes: Camera-controllable Background Generation for Human Motion", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:YsMSGLbcyi4C" },
@@ -201,6 +209,8 @@ const academicPublications = [
   { year: "2024", venue: "ECCV 2024", title: "Wear-Any-Way: Manipulable Virtual Try-on via Sparse Correspondence Alignment", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:qjMakFHDy7sC" },
   { year: "2024", venue: "ACM MM 2024", title: "Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos", url: "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=LcoK9ZEAAAAJ&citation_for_view=LcoK9ZEAAAAJ:Tyk-4Ss8FVUC" },
 ];
+
+const neurips2026Papers = academicPublications.filter((paper) => paper.venue === "NeurIPS 2026");
 
 function SectionTitle({ number, title, subtitle }: { number: string; title: string; subtitle: string }) {
   return (
@@ -255,6 +265,12 @@ export default function Home() {
             <img src="/assets/tryon-grid-2x4.png" alt="AI试衣八位真实用户的两行四列效果展示" />
           </figure>
         </section>
+
+        <a className="research-announcement" href="#publications">
+          <span>RESEARCH UPDATE · 2026.10</span>
+          <strong>3 篇论文获 NeurIPS 2026 录用 · 2 篇最新预印本</strong>
+          <b>查看研究进展 ↗</b>
+        </a>
 
         <section className="report-section business" id="business">
           <SectionTitle number="01" title="淘宝业务场景" subtitle="从技术到消费体验" />
@@ -424,9 +440,30 @@ export default function Home() {
 
         <section className="report-section publications" id="publications">
           <SectionTitle number="05" title="团队学术论文" subtitle="Publications" />
+          <div className="research-updates">
+            <article className="research-acceptance">
+              <small>2026.09 · ACCEPTED</small>
+              <h3><b>{neurips2026Papers.length}</b> 篇论文录用 NeurIPS 2026</h3>
+              <p>从潜空间表征、实时交互视频到少步扩散蒸馏。</p>
+              <ul>
+                {neurips2026Papers.map((paper, index) => (
+                  <li key={paper.title}><a href={paper.url} target="_blank" rel="noreferrer">{["PAE", "FashionChameleon", "CDM"][index]} ↗</a></li>
+                ))}
+              </ul>
+            </article>
+            {recentPreprints.map((paper) => (
+              <article key={paper.url}>
+                <small><time dateTime={paper.date}>2026.10</time> · PREPRINT</small>
+                <h3><a href={paper.url} target="_blank" rel="noreferrer">{paper.name} ↗</a></h3>
+                <p>{paper.summary}</p>
+                <a className="research-paper-link" href={paper.url} target="_blank" rel="noreferrer">阅读论文 ↗</a>
+              </article>
+            ))}
+          </div>
+          <p className="publication-note">更新于 <time dateTime="2026-10-22">2026.10.22</time> · 论文信息参考 <a href="https://mengtingchen.github.io/" target="_blank" rel="noreferrer">Mengting Chen 个人主页 ↗</a>。新论文按公开信息标注为预印本。</p>
           <ol className="publication-list">
             {academicPublications.map((paper) => (
-              <li key={paper.title}>
+              <li key={paper.title} className={paper.venue === "NeurIPS 2026" ? "publication-accepted" : undefined}>
                 <time>{paper.year}</time>
                 <a href={paper.url} target="_blank" rel="noreferrer">{paper.title}</a>
                 {paper.venue && <span>{paper.venue}</span>}

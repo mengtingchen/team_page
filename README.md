@@ -98,3 +98,14 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
 - [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+
+## Team page maintenance
+
+- Edit the React source in `app/page.tsx` and styles in `app/globals.css`.
+- Verify publication titles and public status against <https://mengtingchen.github.io/>. A new arXiv release alone does not establish a conference submission or acceptance.
+- Run `npm test`, then `npm run build:github-pages` to export the static site into `tmp/github-pages/ai-native-team/`.
+- Restore ignored video assets from the existing GitHub static checkout into `public/assets/` before testing or exporting. Keep video files out of source commits.
+- Push the same verified source commit to a new `codex/` branch on both GitHub (`mengtingchen/team_page`) and Alibaba (`cmt271286/team_page`). Do not overwrite Alibaba `main`.
+- Copy the generated `index.html` and referenced non-video assets into the GitHub static checkout for publication. Its existing videos remain available.
+
+The 2026-10-22 update adds CommerceGen-Studio and Representation Guidance as arXiv preprints, and records PAE, FashionChameleon and CDM as NeurIPS 2026 papers.

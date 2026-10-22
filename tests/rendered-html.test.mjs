@@ -57,7 +57,23 @@ test("server-renders the Chinese technical homepage", async () => {
   assert.match(html, /FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization/);
   assert.match(html, /ExpertVerse: A General-Purpose Benchmark for Expert-Level Reasoning in Knowledge-Intensive Visual Synthesis/);
   assert.match(html, /ICML 2026/);
-  assert.ok((html.match(/Under Review/g) ?? []).length >= 5);
+  const publications = html.match(/<ol class="publication-list">([\s\S]*?)<\/ol>/)?.[1] ?? "";
+  assert.equal((publications.match(/Under Review/g) ?? []).length, 1, "Only ExpertVerse retains its existing review status");
+  assert.equal((publications.match(/NeurIPS 2026/g) ?? []).length, 3);
+  assert.equal((publications.match(/<li\b/g) ?? []).length, 23);
+  const rows = publications.match(/<li\b[^>]*>[\s\S]*?<\/li>/g) ?? [];
+  for (const arxiv of ["2605.07915", "2605.15824", "2605.06376"]) {
+    const row = rows.find((entry) => entry.includes(`https://arxiv.org/abs/${arxiv}`)) ?? "";
+    assert.match(row, /class="publication-accepted"/);
+    assert.match(row, /<span>NeurIPS 2026<\/span>/);
+  }
+  for (const arxiv of ["2610.20603", "2610.12978"]) {
+    const row = rows.find((entry) => entry.includes(`https://arxiv.org/abs/${arxiv}`)) ?? "";
+    assert.match(row, /<span>arXiv<\/span>/);
+  }
+  const video = html.match(/<section[^>]*id="video"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.doesNotMatch(video, /Under Review/);
+  assert.match(video, /NeurIPS 2026/);
   assert.doesNotMatch(html, /\[UR\]/);
   assert.match(html, /REPORT/);
   assert.match(html, /与我们一起，<br\s*\/?>(?:<!-- -->)?打造下一代电商 AI/);

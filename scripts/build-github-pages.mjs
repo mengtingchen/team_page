@@ -48,7 +48,7 @@ const staticMetadata = [
   '<meta property="og:title" content="淘天集团AI原生多模态生成团队">',
   '<meta property="og:description" content="直面消费者的 AIGC 图像与视频生成。">',
   '<meta property="og:type" content="website">',
-  '<link rel="icon" href="assets/favicon.svg">',
+  '<link rel="icon" href="assets/alibaba-favicon.svg">',
 ].join("");
 html = html.replace("</head>", `${staticMetadata}</head>`);
 
@@ -61,8 +61,8 @@ for (const assetName of assetNames) {
   html = html.split(`/assets/${assetName}`).join(`assets/${assetName}`);
 }
 
-await copyFile(path.join(root, "public/favicon.svg"), path.join(assetsDir, "favicon.svg"));
-html = html.replace(/href=["']\/favicon\.svg["']/gi, 'href="assets/favicon.svg"');
+await copyFile(path.join(root, "public/alibaba-favicon.svg"), path.join(assetsDir, "alibaba-favicon.svg"));
+html = html.replace(/href=["']\/alibaba-favicon\.svg["']/gi, 'href="assets/alibaba-favicon.svg"');
 html = html.replace(
   "</head>",
   '<meta name="generator" content="Codex GitHub Pages build"><!-- github-pages-static-build --></head>',

@@ -49,7 +49,17 @@ test("server-renders the Chinese technical homepage", async () => {
   assert.match(html, /实时交互视频/);
   assert.doesNotMatch(html, /高保真.*可交互.*可控镜头.*实时生成/);
   assert.match(html, /团队学术论文/);
-  assert.ok((html.match(/href="#publications"/g) ?? []).length >= 2, "顶部导航与左侧索引均应包含 05 团队学术论文");
+  assert.ok((html.match(/href="#commercegen"/g) ?? []).length >= 2);
+  const commerce = html.match(/<section[^>]*id="commercegen"[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.match(commerce, /PERL-AGENT/);
+  assert.match(commerce, /REPORT · 2026/);
+  assert.match(commerce, /CommerceGen-Bench/);
+  for (const asset of ["commercegen-pipeline.png", "commercegen-showcase.png"]) {
+    assert.ok(commerce.includes(`/assets/${asset}`));
+    await access(new URL(`../public/assets/${asset}`, import.meta.url));
+  }
+  assert.ok(html.indexOf('id="commercegen"') < html.indexOf('id="publications"'));
+  assert.ok((html.match(/href="#publications"/g) ?? []).length >= 2, "顶部导航与左侧索引均应包含 06 团队学术论文");
   assert.doesNotMatch(html, /Diversity Transfer Network for Few-shot Learning/);
   assert.doesNotMatch(html, /Structured Random Forest for Label Distribution Learning/);
   assert.doesNotMatch(html, /Learning to Focus: Cascaded Feature Matching Network for Few-shot Image Recognition/);

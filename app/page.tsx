@@ -3,7 +3,8 @@ const sections = [
   ["02", "商用试穿算法", "Tstars-Tryon 1.0", "tryon"],
   ["03", "高效图像模型", "训练 · 数据 · 评测", "image-model"],
   ["04", "实时交互视频", "二维生成到交互式 4D", "video"],
-  ["05", "团队学术论文", "Publications", "publications"],
+  ["05", "电商主图生成", "CommerceGen-Studio", "commercegen"],
+  ["06", "团队学术论文", "Publications", "publications"],
 ];
 
 const scrollSpyScript = `(() => {
@@ -436,8 +437,50 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="report-section commercegen" id="commercegen">
+          <SectionTitle number="05" title="电商主图生成" subtitle="CommerceGen-Studio" />
+          <div className="commerce-intro">
+            <div>
+              <p className="kicker">FROM SKU METADATA TO COMMERCIAL MAIN IMAGES</p>
+              <h3>从商品信息，生成可直接使用的商业主图</h3>
+              <p>CommerceGen-Studio 将多源 SKU 信息转化为卖点与版式，再联合商品白底图、商标参考和布局描述生成主图，兼顾主体保真、商标一致与文字准确。</p>
+            </div>
+            <a className="commerce-report" href="https://arxiv.org/abs/2610.20603" target="_blank" rel="noreferrer">
+              <small>REPORT · 2026</small>
+              <strong>CommerceGen-Studio: An End-to-End Framework for Commercial-Grade Main-Image Generation</strong>
+              <span>阅读论文 ↗</span>
+            </a>
+          </div>
+          <div className="commerce-metrics" aria-label="论文报告的模型与生产指标">
+            <div><b>6B</b><span>Swift-Image 生成骨干</span></div>
+            <div><b>5 秒级</b><span>单张主图生成延迟</span></div>
+            <div><b>百万张 / 日</b><span>线上主图生产规模</span></div>
+          </div>
+          <figure className="commerce-figure">
+            <a href="/assets/commercegen-pipeline.png" target="_blank" rel="noreferrer" aria-label="查看 CommerceGen-Studio 完整框架图">
+              <img src="/assets/commercegen-pipeline.png" width="2014" height="1093" loading="lazy" decoding="async" alt="CommerceGen-Studio训练与推理框架：PERL-Agent卖点提炼、Layout Thinker版式规划与SKU-DiT多条件生成" />
+            </a>
+            <figcaption>端到端框架 · 从多源商品信息到主图生成，结合强化学习、蒸馏与版式优化。点击图片查看原图。</figcaption>
+          </figure>
+          <div className="commerce-methods">
+            <article><small>01 · PERL-AGENT</small><h3>提炼可信卖点</h3><p>融合标题、OCR 与商品属性，通过生成、评判、分析和优化的闭环提炼卖点，减少信息冲突。</p></article>
+            <article><small>02 · LAYOUT THINKER</small><h3>规划图文版式</h3><p>将卖点转为可执行布局，以文本与成图两类奖励优化商品、商标和文案的编排。</p></article>
+            <article><small>03 · SKU-DIT</small><h3>兼顾保真与效率</h3><p>采用“强化—蒸馏—再强化”训练，在少步生成下保持商品细节、商标与文字质量。</p></article>
+          </div>
+          <figure className="commerce-figure commerce-showcase">
+            <a href="/assets/commercegen-showcase.png" target="_blank" rel="noreferrer" aria-label="查看 CommerceGen-Studio 完整生成效果图">
+              <img src="/assets/commercegen-showcase.png" width="1354" height="2038" loading="lazy" decoding="async" alt="CommerceGen-Studio跨品类主图生成效果，涵盖鞋服、家居、美妆、家电与食品等商品" />
+            </a>
+            <figcaption>跨品类生成效果 · 商品主体、品牌标识与卖点文案协同呈现。图片来自论文 Figure 1，点击查看原图。</figcaption>
+          </figure>
+          <div className="commerce-benchmark">
+            <div><small>OPEN BENCHMARK</small><h3>CommerceGen-Bench</h3><p>来自真实流量的跨品类困难样本，围绕指令遵循、商品融合等维度评估主图生成能力。</p></div>
+            <nav aria-label="CommerceGen-Bench数据集"><a href="https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/CommerceGen-Bench" target="_blank" rel="noreferrer">Hugging Face ↗</a><a href="https://modelscope.cn/datasets/TaoTianGroup/CommerceGen-Bench" target="_blank" rel="noreferrer">ModelScope ↗</a></nav>
+          </div>
+        </section>
+
         <section className="report-section publications" id="publications">
-          <SectionTitle number="05" title="团队学术论文" subtitle="Publications" />
+          <SectionTitle number="06" title="团队学术论文" subtitle="Publications" />
           <ol className="publication-list">
             {academicPublications.map((paper) => (
               <li key={paper.title}>

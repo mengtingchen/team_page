@@ -380,7 +380,8 @@ figure { margin: 0; }
 .commerce-methods article { padding: 22px; border-right: 1px solid var(--line); }
 .commerce-methods article:last-child { border-right: 0; }
 .commerce-methods h3 { margin: 12px 0 10px; font-size: 19px; }
-.commerce-showcase-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 8px; }
+/* Unequal crop heights use proportional widths so both panels render at the same height. */
+.commerce-showcase-pair { display: grid; grid-template-columns: minmax(0, 907fr) minmax(0, 1131fr); align-items: start; gap: 8px; }
 .commerce-showcase-half { position: relative; display: block; overflow: hidden; }
 .commerce-showcase-half img { position: absolute; left: 0; width: 100%; height: auto; max-height: none; border: 0; }
 /* Split at the white gutter below the jewelry row (1131 of 2038 pixels). */

@@ -464,10 +464,6 @@ export default function Home() {
             </a>
             <figcaption>跨品类生成效果 · 商品主体、品牌标识与卖点文案协同呈现。图片来自论文 Figure 1，点击查看原图。</figcaption>
           </figure>
-          <div className="commerce-benchmark">
-            <div><small>OPEN BENCHMARK</small><h3>CommerceGen-Bench</h3><p>来自真实流量的跨品类困难样本，围绕指令遵循、商品融合等维度评估主图生成能力。</p></div>
-            <nav aria-label="CommerceGen-Bench数据集"><a href="https://huggingface.co/datasets/TaobaoTmall-AlgorithmProducts/CommerceGen-Bench" target="_blank" rel="noreferrer">Hugging Face ↗</a><a href="https://modelscope.cn/datasets/TaoTianGroup/CommerceGen-Bench" target="_blank" rel="noreferrer">ModelScope ↗</a></nav>
-          </div>
         </section>
 
         <section className="report-section publications" id="publications">

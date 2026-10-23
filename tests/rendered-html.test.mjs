@@ -53,7 +53,7 @@ test("server-renders the Chinese technical homepage", async () => {
   const commerce = html.match(/<section[^>]*id="commercegen"[\s\S]*?<\/section>/)?.[0] ?? "";
   assert.match(commerce, /PERL-AGENT/);
   assert.match(commerce, /REPORT · 2026/);
-  assert.match(commerce, /CommerceGen-Bench/);
+
   for (const asset of ["commercegen-showcase.png"]) {
     assert.ok(commerce.includes(`/assets/${asset}`));
     await access(new URL(`../public/assets/${asset}`, import.meta.url));
